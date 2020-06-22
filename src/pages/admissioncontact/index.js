@@ -65,26 +65,26 @@ export default function AdmissionContact() {
               <CardContent>
                 <Typography variant="body" gutterBottom>
                   <Box component="span" fontSize="2rem" gutterBottom>
-                  {admissionIncharge.name}
+                  {admissionIncharge&&admissionIncharge.name}
                   </Box>
                   <br />
                   <Box fontSize="1rem">
-                    {admissionIncharge.designation}
+                    {admissionIncharge&&admissionIncharge.designation}
                   </Box>
                   <br />
                   <a href={`mailto:${admissionIncharge.emailID}`}>
-                    {admissionIncharge.emailID}
+                    {admissionIncharge&&admissionIncharge.emailID}
                   </a>,&nbsp;
                   <a href={`mailto:${admissionIncharge.emailID}`}>
-                    {admissionIncharge.emailIDSecondary}
+                    {admissionIncharge&&admissionIncharge.emailIDSecondary}
                   </a>
                   <br />
                   <a href={`tel:${admissionIncharge.mobileNo}`}>
-                    {admissionIncharge.mobileNo}
+                    {admissionIncharge&&admissionIncharge.mobileNo}
                   </a>
                   <br />
                   <a href={`fax:${admissionIncharge.fax}`}>
-                    {admissionIncharge.fax}
+                    {admissionIncharge&&admissionIncharge.fax}
                   </a>
                   <br />
                 </Typography>
