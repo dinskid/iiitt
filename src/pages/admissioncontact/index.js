@@ -53,7 +53,7 @@ export default function AdmissionContact() {
             For Admission related queries, contact Admission Incharge of IIIT Trichy.
           </Typography>
           <br />
-          <Card className={classes.card}>
+          {admissionIncharge&&<Card className={classes.card}>
             <Grid container>
               <Grid item xs={12} >
                 <CardMedia
@@ -90,7 +90,7 @@ export default function AdmissionContact() {
                 </Typography>
               </CardContent>
             </Grid>
-          </Card>
+          </Card>}
         </Grid>
       </Grid>
       <Footer />
