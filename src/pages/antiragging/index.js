@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/index'
 import Footer from '../../components/footer/index'
 import { Typography, Grid, Box } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded'
 
 const createStyles = makeStyles({
   container: {
@@ -25,6 +26,10 @@ const createStyles = makeStyles({
   image: {
     width: "100%"
   },
+  download: {
+    color: "#3f51b5",
+    transform: "translate(0,5px)"
+  }
 })
 
 export default function AntiRagging() {
@@ -46,7 +51,8 @@ export default function AntiRagging() {
             <section>
               <Typography variant="body" gutterBottom className={classes.themeText}>
                 <a href={require(`../../docs/${arCommittee}`)} download={`${arCommittee}`} className={classes.link}>
-                  Anti-Ragging Committee
+                  {arCommittee}&nbsp;&nbsp;&nbsp;
+                  <GetAppRoundedIcon className={classes.download}/>
                 </a>
               </Typography>
               <br />

@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/index'
 import Footer from '../../components/footer/index'
 import { Typography, Grid, Box } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded'
 
 const createStyles = makeStyles({
   container: {
@@ -27,10 +28,15 @@ const createStyles = makeStyles({
   },
   sectionPadding: {
     padding: "1rem 0",
+  },
+  download: {
+    color: "#3f51b5",
+    transform: "translate(0,5px)"
   }
 })
 
 export default function AdmissionProcedure() {
+  const rank='OpeningandClosingRank.pdf'
   const classes = createStyles()
   return (
     <>
@@ -116,24 +122,13 @@ export default function AdmissionProcedure() {
               <section className={classes.sectionPadding}>
                 <Typography variant="h5" className={classes.themeText}>
                   <Box component="span" fontWeight="fontWeightBold">
-                    Opening and Closing Rank
+                    Opening and Closing Rank of IIIT Trichy, JoSAA 2018
                   </Box>
                 </Typography>
-                <Box fontSize="1.1rem" className={classes.sectionText}>
-                  <Typography>
-                    <Box component="span" fontSize="1.2em">
-                      IIIT Trichy offers the following two Undergraduate Programs:
-                    </Box>
-                  </Typography>
-                  <ul style={{lineHeight:"1.5", paddingTop: "0.7rem"}}>
-                    <li style={{marginLeft: "1rem"}}>
-                      Computer Science and Engineering (4 years, Bachelor of Technology)
-                    </li>
-                    <li style={{marginLeft: "1rem"}}>
-                      Electronics and Communication Engineering (4 years, Bachelor of Technology)
-                    </li>
-                  </ul>
-                </Box>
+                <a href={require(`../../docs/${rank}`)} download={`${rank}`} className={classes.link}>
+                  {rank}&nbsp;&nbsp;&nbsp;
+                  <GetAppRoundedIcon className={classes.download}/>
+                </a>
               </section>
             </Grid>
           </Grid>
