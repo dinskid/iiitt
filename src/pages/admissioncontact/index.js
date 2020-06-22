@@ -3,7 +3,8 @@ import Navbar from '../../components/navbar/index'
 import Footer from '../../components/footer/index'
 import { Card, Typography, Grid, Box, CardMedia, CardContent } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import admissionIncharge from '../../json/admission_contact.json'
+// import admissionIncharge from '../../json/admission_contact.json'
+const admissionIncharge = require('../../json/admission_contact.json')
 
 const createStyles = makeStyles({
   container: {
